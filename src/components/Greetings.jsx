@@ -10,13 +10,10 @@ function Greetings() {
 
   useEffect(() => {
     dispatch(fetchGreetings())
-  }, [dispatch])
+  }, [])
 
   return (
-    // <div>Hello</div>
-    <ul>{greetings.map(greet => (
-      <li key={greet.id}>{greet.msg}</li>
-    ))}</ul>
+    <h2 style={{color: "blue"}}>{greetings.msg}</h2>
   )
 }
 

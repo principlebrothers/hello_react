@@ -1,14 +1,14 @@
 import './App.css'
 import Greetings from './components/Greetings';
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Random Greetings</h1>
-      </header>
-      <Greetings />
+      <Routes>
+        <Route path="/" element={<Greetings />} />
+      </Routes>
     </div>
   )
 }

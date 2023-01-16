@@ -6,7 +6,8 @@ export const fetchGreetings = createAsyncThunk(
     const response = await fetch('https://greeting-t0aj.onrender.com/greetings');
     const greeting = await response.json();
     return greeting[0];
-  });
+  },
+);
 
 const greetingSlice = createSlice({
   name: 'greeting',
@@ -14,7 +15,7 @@ const greetingSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchGreetings.fulfilled, (_state, action) => action.payload);
-  }
+  },
 });
 
 export default greetingSlice.reducer;

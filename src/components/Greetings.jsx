@@ -13,7 +13,12 @@ function Greetings() {
   }, [])
 
   return (
-    <h2 style={{color: "blue"}}>{greetings.msg}</h2>
+    <>
+    <header>
+        <h1>Random Greetings</h1>
+      </header>
+      <h2 style={{ color: "blue" }}>{greetings.msg}</h2>
+    </>
   )
 }
 
